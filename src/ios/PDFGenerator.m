@@ -140,7 +140,7 @@
         self.htmlPdfKit = [BNHtmlPdfKit saveHTMLAsPdf:data
                                              pageSize:pageSize
                                           isLandscape:landscape
-										      baseUrl:base
+										      baseUrl:[[NSBundle mainBundle] bundleURL]
                                               success:[self GetPDFHandler:command setOptions:option]
                                               failure:[self GetErrorHandler:command]];
     
